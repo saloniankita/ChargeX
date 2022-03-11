@@ -1,0 +1,278 @@
+<!doctype html>
+<html class="charging-locator" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta content="text/html; charset=UTF-8; X-Content-Type-Options=nosniff" http-equiv="Content-Type" />
+
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="stylesheet" href="styles/styles.css">
+
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/8d596f83e6.js" crossorigin="anonymous"></script>
+
+    <title>ChargeX - Find Nearest Electric Car Charging Stations</title>
+
+    <meta name="description"
+        content="Searching for electric car charging stations in India? Click &amp; select your nearest location to get a list of fast charging stations for your electric vehicles." />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Fredoka', sans-serif;
+        }
+    </style>
+
+</head>
+
+<body data-aos-easing="ease">
+
+    <!--Header Starts-->
+
+    <div class="header-wrap">
+        <div class="header">
+            <div class="h-bottom" style="background-color: black;">
+                <div class="col-lg-11 col-md-11 col-sm-12 myContainer">
+                    <div class="row">
+                        <div class="nav-wrapper">
+                            <div class="logo-desktop">
+                                <a href="#">
+                                    <img src="assets/logo.png" alt="" width="100px">
+                                </a>
+                            </div>
+                            <div class="cta-rbb-desktop" style="background-color: white;">
+                                <ul>
+                                    <li><a href="map.html"><span
+                                                style="color: black; font-family: 'Fredoka', sans-serif;">Home</span></a>
+                                    </li>
+                                    <li><a href="map.html"><span
+                                                style="color: black;font-family: 'Fredoka', sans-serif;">About
+                                                Us</span></a></li>
+                                </ul>
+                            </div>
+
+                            <div class="dropdownMenu">
+                                <a><img src="assets/ico-hamburger.png" alt="" class="img-responsive" id="hamburger"></a>
+                            </div>
+                        </div>
+
+                        <!--Hamburger menu mobile starts-->
+                        <div class="customDrowpdownMenu">
+                            <ul>
+                                <li class="">
+                                    <a href="map.html"><span>Home</span></a>
+                                </li>
+                                <li class="">
+                                    <a href="map.html"><span>About US</span></a>
+                            </ul>
+                        </div>
+                        <!--Hamburger menu mobile ends-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Header Ends-->
+
+    <div class="overlay"></div>
+    <div class="enquiryLoader" style="   display: none;">
+        <img class="img-responsive" src="assets/loading.gif">
+
+    </div>
+
+
+
+    <div class="pagewidth">
+
+        <!-- Contact Map Section -->
+        <section class="gmapsection">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 noPadding">
+                    <div class="prLocator">
+                        <div class="col-md-3 locator">
+
+                            <fieldset class="clFieldset">
+                                <legend>Keys:</legend>
+                                <div class="legendsWrap">
+
+                                    <p style="width:50%;"><i><img src="assets/Zeon-charging-icon.png"
+                                                class="img-responsive locatorIcons" alt="Tata Power"></i>Tata Power</p>
+                                    <p style="width:50%;"><i><img src="assets/icon-EESL.png"
+                                                class="img-responsive locatorIcons" alt="Fast Charger"></i>EESL</p>
+                                    <p style="width:50%;"><i><img src="assets/ather.png"
+                                                class="img-responsive locatorIcons" alt="Ather"></i>Ather</p>
+
+                                    <p style="width:50%;"><i><img src="assets/dealerships-service-stations.png"
+                                                class="img-responsive locatorIcons" alt="Others"></i>Zeon chargers</p>
+                                    <p style="width:50%;"><i><img src="assets/statiq-charging-icon.png"
+                                                class="img-responsive locatorIcons" alt="Others"></i>Statiq chargers</p>
+
+
+                                    <!-- new charging-->
+                                    <p style="width:50%;"><i><img src="assets/icon-volttic.png"
+                                                class="img-responsive locatorIcons" alt="Volttic"></i>Volttic</p>
+                                    <p style="width:50%;"><i><img src="assets/icon-PlugnGo.png"
+                                                class="img-responsive locatorIcons" alt="PlugnGo"></i>PlugnGo</p>
+                                    <p style="width:50%;"><i><img src="assets/icon-BESCOM.png"
+                                                class="img-responsive locatorIcons" alt="BESCOM"></i>BESCOM</p>
+                                    <p style="width:50%;"><i><img src="assets/icon-Electreefi.png"
+                                                class="img-responsive locatorIcons" alt="Electreefi"></i>Electreefi</p>
+
+                                    <p style="width:50%;"><i><img src="assets/icon-otherspin.png"
+                                                class="img-responsive locatorIcons" alt="Others"></i>Others</p>
+                                </div>
+                            </fieldset>
+
+                            <div class="chargingLicon">
+                                <h1 style="color: black;">Charging Locator</h1>
+                                <i class="fas fa-sync-alt chargingLicon1"></i>
+                            </div>
+
+                            <div class="select-charging">
+                                <div class="states selecty-dd">
+                                    <select class="select-option" name="slct1" id="slct1"
+                                        style="font-family: 'Fredoka', sans-serif; color: black;">
+                                        <option value="" selected="">Select State</option>
+                                        <option value="Andaman and Nicobar Islands" class="states1">Andaman and Nicobar
+                                            Islands</option>
+                                        <option value="Andhra Pradesh" class="states1">Andhra Pradesh</option>
+                                        <option value="Arunachal Pradesh" class="states1">Arunachal Pradesh</option>
+                                        <option value="Assam" class="states1">Assam</option>
+                                        <option value="Bihar" class="states1">Bihar</option>
+                                        <option value="Chandigarh" class="states1">Chandigarh</option>
+                                        <option value="Chhattisgarh" class="states1">Chhattisgarh</option>
+                                        <option value="Dadra and Nagar Haveli" class="states1">Dadra and Nagar Haveli
+                                        </option>
+                                        <option value="Daman and Diu" class="states1">Daman and Diu</option>
+                                        <option value="Delhi" class="states1">Delhi</option>
+                                        <option value="Goa" class="states1">Goa</option>
+                                        <option value="Gujarat" class="states1">Gujarat</option>
+                                        <option value="Haryana" class="states1">Haryana</option>
+                                        <option value="Himachal Pradesh" class="states1">Himachal Pradesh</option>
+                                        <option value="Jammu and Kashmir" class="states1">Jammu and Kashmir</option>
+                                        <option value="Jharkhand" class="states1">Jharkhand</option>
+                                        <option value="Karnataka" class="states1">Karnataka</option>
+                                        <option value="Kerala" class="states1">Kerala</option>
+                                        <option value="Lakshadweep" class="states1">Lakshadweep</option>
+                                        <option value="Madhya Pradesh" class="states1">Madhya Pradesh</option>
+                                        <option value="Maharashtra" class="states1">Maharashtra</option>
+                                        <option value="Manipur" class="states1">Manipur</option>
+                                        <option value="Meghalaya" class="states1">Meghalaya</option>
+                                        <option value="Mizoram" class="states1">Mizoram</option>
+                                        <option value="Nagaland" class="states1">Nagaland</option>
+                                        <option value="Odisha" class="states1">Odisha</option>
+                                        <option value="Pondicherry" class="states1">Pondicherry</option>
+                                        <option value="Punjab" class="states1">Punjab</option>
+                                        <option value="Rajasthan" class="states1">Rajasthan</option>
+                                        <option value="Sikkim" class="states1">Sikkim</option>
+                                        <option value="Tamil Nadu" class="states1">Tamil Nadu</option>
+                                        <option value="Telangana" class="states1">Telangana</option>
+                                        <option value="Tripura" class="states1">Tripura</option>
+                                        <option value="Uttar Pradesh" class="states1">Uttar Pradesh</option>
+                                        <option value="Uttarakhand" class="states1">Uttarakhand</option>
+                                        <option value="West Bengal" class="states1">West Bengal</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="select-charging">
+                                <div class="states">
+                                    <select class="select-option " name="slct2" id="slct2"
+                                        style="font-family: 'Fredoka', sans-serif; color: black">
+                                        <option value="" selected="">Select City</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="scrollbar">
+                                <h2 style="font-family: 'Fredoka', sans-serif;">Results For Charging Stations:</h2>
+
+                            </div>
+
+                            <div class="content--" style="border: 1px solid #337ab7; max-height: 180px;">
+                                <div class="content-s">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="row">
+                                <div id="map" class="hidden-xs locatorMap" style="width: 100%;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </section>
+        <!-- Contact Map Section -->
+
+
+    </div>
+
+    <!--Footer Starts-->
+    <div class="footer">
+        <div class="col-lg-7 col-md-9 col-sm-11 myContainer">
+            <div class="row" style="border-bottom: 1px solid #575454;">
+                <div class="col-md-9 col-sm-6">
+                    <div class="tollfree">
+                        <h5><a href="#" style="color: #337ab7">ChargeX</a>- <span style="color: white;">
+                                Find Nearest Electric Car Charging Stations</span></h5>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <a href="map.html" class="CC-btn " style="color: white;">CodeClashers</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-sm-6">
+                    <div class="social-icons">
+                        <ul>
+                            <li><a href="map.html" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="map.html" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="map.html" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                            <li><a href="map.html" target="_blank"><i class="fab fa-youtube"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6">
+                    <div class="footer-menu">
+                        <ul>
+                            <li><a href="map.html">Home</a></li>
+                            <li><a href="map.html">AboutUs</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Footer Starts-->
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/bootstrapquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"
+        type="text/javascript"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/getbootstrap.js"></script>
+    <!-- Owl Carousel -->
+    <script src="js/owlcarousel.js"></script>
+    <!--AOS-->
+    <script src="js/aos.js"></script>
+    <!-- header wrapper -->
+    <script src="js/header.js"></script>
+    <!-- mousewheel -->
+    <script src="js/mousewheel.js"></script>
+    
+</body>
+
+</html>
+
+<script src="js/stationdata.js"></script>
+
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVgZSVkBFfK1QmY9lkvNW6Yt-8ayV2RXs&callback=initMap"></script>
